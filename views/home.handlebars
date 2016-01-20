@@ -1,0 +1,41 @@
+<h1>GUC SE 2016 JTA Application!</h1>
+
+<p>To be considered as a Junior Teacher Assistant for the SE 2016, your task will
+    be to issue an HTTP POST request with a JWT payload containing your application
+    details to the official www.secourse.com (api/submit) API endpoint. </p>
+    <br/>
+
+<h3>Submission Instructions</h3>
+<ol>
+  <li>Create a JWT at http://jwtbuilder.jamiekurtz.com/</li> <br/>
+  <li>The JWT should have the following format: <br/>
+    { <br/>
+        "iss": "Amr Desouky", <br/>
+        "iat": 1453252184, <br/>
+        "exp": 1484788187,  <--set expiration to 1 year (click on the green button)<br/>
+        "aud": "www.secourse.com",<br/>
+        "sub": "GUC JTA Application", <br/>
+        "email": "desoukya@gmail.com", <-- this field should be added as a custom claim<br/>
+        "phone": "011-***-*****"<br/>
+    }<br/>
+  </li><br/>
+  <li>Sign the JWT using the following secret: kG8jFadlSDKlmnSE20162r32Nvalssdf</li> <br/>
+  <li>Go to http://jwt.io/ and paste your HS256 encoded JWT to verify payload info</li>
+      *please note, after pasting, if you see "COPY JWT to Clipboard" at the bottom of your
+      encoded jwt, be sure to remove it <br/><br/>
+  <li>Invoke an HTTP Post Request to the /api/submit endpoint and pass the jwt as a data parameter labeled as 'wt' </li>
+</ol>
+
+<br/>
+
+<h3>Helpful Things to Know </h3>
+To initiate the HTTP Post request, you can:
+<ol>
+  <li>Send the request directly from this page using the development console and jQuery ($.ajax({}))</li><br/>
+  <li>Write your own application that initiates the HTTP POST request</li><br/>
+  <li>Use an HTTP request builder such as Postman</li><br/>
+</ol>
+
+
+Good Luck, <br/>
+Dr. Amr Desouky
